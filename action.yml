@@ -27,16 +27,6 @@ inputs:
   remotePath: 
     description: 'Remote file or directory path (file or directories will be created)'
     required: true
-  privateKey: 
-    description: 'Path to key file or directly the key (via secret or paste)'
-    required: false
-  privateKeyIsFile: 
-    description: 'Define if private key is a local file or string'
-    required: false
-    default: 'false'
-  passphrase: 
-    description: 'Define a passphrase for encrypted private keys'
-    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
