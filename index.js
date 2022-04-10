@@ -9,7 +9,6 @@ const host = core.getInput('host');
 const port = parseInt(core.getInput('port'));
 const username = core.getInput('username');
 const password = core.getInput('password');
-const agent = core.getInput('agent');
 const privateKeyIsFile = core.getInput('privateKeyIsFile');
 const passphrase = core.getInput('passphrase');
 
@@ -33,7 +32,6 @@ sftp.connect({
     port: port,
     username: username,
     password: password,
-    agent: agent,
     privateKey: privateKey,
     passphrase: passphrase
 }).then(async () => {
