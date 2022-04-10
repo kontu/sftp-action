@@ -197,7 +197,8 @@ exports.exportVariable = exportVariable;
  * @param secret value of the secret
  */
 function setSecret(secret) {
-    command_1.issueCommand('add-mask', {}, secret);
+  if (secret.length != 0){
+    command_1.issueCommand('add-mask', {}, secret);}
 }
 exports.setSecret = setSecret;
 /**
